@@ -1,0 +1,22 @@
+.header{
+    background-color: #FC4100;
+    height: 6rem;
+    position: sticky;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.product-card{
+width: 10rem;
+}
+
+.product-card__img{
+height: 10rem;
+width: 10rem;
+}
