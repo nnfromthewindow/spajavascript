@@ -1,15 +1,10 @@
 .header{
     background-color: #FC4100;
     height: 6rem;
-    position: sticky;
 }
 
 .main{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    width: 100%;
+
 }
 
 .product-card{
@@ -19,4 +14,53 @@ width: 10rem;
 .product-card__img{
 height: 10rem;
 width: 10rem;
+}
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.main-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  width: 40%;
+}
+
+.main-image img{
+   
+}
+
+.right-container{
+    padding: 1rem;
+    max-width: 50%;
+}
+
+.images-up {
+    display: flex;
+    justify-content: space-around;
+}
+.images-down {
+    display: flex;
+    justify-content: space-around;
+}
+.images-up img{
+
+    width: 50%;
+    object-fit: contain;
+}
+.images-down img{
+    
+    width: 50%;
+    object-fit: contain;
+}
+
+.footer{
+    position: absolute;
+    background-color: #2C4E80;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
 }

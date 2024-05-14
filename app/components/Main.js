@@ -1,3 +1,4 @@
+import { Footer } from "./Footer.js"
 
 
 export function Main(){
