@@ -1,19 +1,152 @@
 .header{
     background-color: #FC4100;
     height: 6rem;
+   
+}
+.navbar h1{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
 }
 
-.main{
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+padding-top: 0.6rem;
+text-decoration: none;
+}
 
+.nav-links a:link{
+    color: black;
+    text-decoration: none;
+}
+.nav-links a:visited{
+ color: black;
+ 
+}
+
+.tech-title{
+    background-color: #FFC55A;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 5em;
+}
+
+.clothing-title{
+    background-color: #FC4100;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 5em;
+}
+
+.clothing-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.product{
+    display: flex;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.product-title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+}
+
+.product-price{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.5em;
+    padding-top: 2rem;
+}
+
+.product-description{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.product-image img{
+    max-width: 40vh;
 }
 
 .product-card{
-width: 10rem;
+    background-color: #FFC55A;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 3rem;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 10rem;
+}
+.product-card__title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    margin-top: 10px;
 }
 
 .product-card__img{
-height: 10rem;
-width: 10rem;
+    height: 10rem;
+    width: 10rem;
+}
+
+.product-card__link{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    text-align: center;
+    
+}
+
+.product-card__link a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.product-card__link a:visited{
+    color: black;
+}
+
+.product-card__price{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    padding: 1rem;
+text-align: center;
+}
+
+.product-card:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .home-container{
@@ -27,10 +160,6 @@ width: 10rem;
     flex-direction: column;
     justify-content: center;
   width: 40%;
-}
-
-.main-image img{
-   
 }
 
 .right-container{
@@ -58,9 +187,91 @@ width: 10rem;
 }
 
 .footer{
-
     background-color: #2C4E80;
-  
+    display: flex;
+    gap: 3rem;
     height: 5rem;
+    justify-content: space-around;
     width: 100%;
+}
+
+.footer-name{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-top: 2rem;
+}
+
+.footer a{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-top: 2rem;
+}
+
+.footer a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.category h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+.category h1:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.category a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.category a:visited{
+    color: black;
+}
+
+.category-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .category h1{
+     font-size: 2.5em;
+    }
+    .navbar h1{
+      font-size: 1.5em;
+    }
+
+    .product-image img{
+        max-width: 20vh;
+    }
+    .product-title{
+        font-size: 2em;
+    }
+    .product-price{
+        font-size: 1.5em;
+    }
+
+    .tech-title{
+        font-size: 3em;
+    }
+    .clothing-title{
+        font-size: 3em;
+    }
 }

@@ -10,10 +10,12 @@ export function ClothCard(props){
     <div class="product-card" data-id=${id}>
     <img class="product-card__img" src="${image}" alt="${title}">
     <h2 class="product-card__title">${title}</h2>
-    <p class="product-card__price">${price}</p>
-    
+    <p class="product-card__price">$ ${price}</p>
+    <h3 class="product-card__link">
+    <a href="#/product/${id}" data-id=${id}>Más información</a>   
+</h3>
    
-    <a href="#/product/${id}" data-id=${id}>Más información</a>
+    
     </div>
     `
 }

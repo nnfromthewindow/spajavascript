@@ -1,8 +1,15 @@
 export function Categories(props){
+    document.addEventListener("click",(e)=>{
+        if(!e.target.matches(".category a")) return false
+        console.log(e.target.dataset.category)
+        localStorage.setItem('category', e.target.dataset.category)
+    })
     let html=''
+    
 props.forEach((category) => {
+    var encodedUrl = encodeURIComponent(category);
     html+=`<div class="category">
-    <h1>${category}</h1>
+    <h1><a href="#product/category/${encodedUrl}" data-category="${category}">${category.toUpperCase()}</a></h1>
 </div>`
 });
 
