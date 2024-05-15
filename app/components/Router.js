@@ -14,28 +14,17 @@ export async function Router(){
     let category = localStorage.getItem('category')
     var encodedUrl = encodeURIComponent(category);
     $main.innerHTML = null
-console.log(category)
-console.log(hash)
+
 
     if(!hash || hash === "#/"){
         await fetchShop({
             url: shopApi.ELECTRONICS,
             funcResponse: (products)=>{
-           
-                //let html = ''
-               // products.forEach((product)=>(html+= ProductCard(product)))
-                //document.getElementById('main').innerHTML = html
                 $main.innerHTML=HomeElectro(products)
-                //$main.appendChild(Footer())
                  fetchShop({
                     url: shopApi.WCLOTHING,
                     funcResponse: (products)=>{
-                  
-                        //let html = ''
-                       // products.forEach((product)=>(html+= ProductCard(product)))
-                        //document.getElementById('main').innerHTML = html
                         $main.innerHTML+=HomeClothing(products)
-                        //$main.appendChild(Footer())
                     }
                 })  
             }
@@ -47,12 +36,7 @@ console.log(hash)
         await fetchShop({
             url: shopApi.CATEGORIES,
             funcResponse: (categories)=>{
-             
-                //let html = ''
-               // categories.forEach((product)=>(html+= ProductCard(product)))
-                //document.getElementById('main').innerHTML = html
                 $main.innerHTML=Categories(categories)
-                //$main.appendChild(Footer())
             }
         })  
     }
@@ -65,7 +49,6 @@ console.log(hash)
         })
     }
     else if(hash === `#product/category/${encodedUrl}`){
-        console.log("GOLAA")
         await fetchShop({
             url:`${shopApi.CATEGORY}/${encodedUrl}`,
             funcResponse: (product)=>{

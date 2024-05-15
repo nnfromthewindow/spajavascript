@@ -1,7 +1,6 @@
 export function Categories(props){
     document.addEventListener("click",(e)=>{
         if(!e.target.matches(".category a")) return false
-        console.log(e.target.dataset.category)
         localStorage.setItem('category', e.target.dataset.category)
     })
     let html=''
