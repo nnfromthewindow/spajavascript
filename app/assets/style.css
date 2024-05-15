@@ -58,9 +58,9 @@ width: 10rem;
 }
 
 .footer{
-    position: absolute;
+
     background-color: #2C4E80;
-    bottom: 0;
+  
     height: 5rem;
     width: 100%;
 }

@@ -1,5 +1,6 @@
 import { fetchShop } from "../helpers/fetchShop.js"
 import shopApi from "../helpers/shopApi.js"
+import { Categories } from "./Categories.js"
 import { Footer } from "./Footer.js"
 import { HomeClothing } from "./HomeClothing.js"
 import { HomeElectro } from "./HomeElectro.js"
@@ -40,7 +41,17 @@ export async function Router(){
 
     }
     else if(hash === '#/categorias'){
-        $main.innerHTML = `<h1>CATEGORIAS DE PRODUCTOS</h1>`
+        await fetchShop({
+            url: shopApi.CATEGORIES,
+            funcResponse: (categories)=>{
+                console.log(categories)
+                //let html = ''
+               // categories.forEach((product)=>(html+= ProductCard(product)))
+                //document.getElementById('main').innerHTML = html
+                $main.innerHTML=Categories(categories)
+                //$main.appendChild(Footer())
+            }
+        })  
     }
     else if(hash === `#/product/${id}`){
         await fetchShop({
