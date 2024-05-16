@@ -12,5 +12,9 @@ props.forEach((category) => {
 </div>`
 });
 
-return html
+return `<div class="categories-container">
+<div class="categories-flex">
+${html}
+</div>
+</div>`
 }

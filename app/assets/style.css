@@ -1,8 +1,19 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; 
+  }
+
 .header{
     background-color: #FC4100;
     height: 6rem;
-   
 }
+
+.main{
+    flex:1;
+}
+
 .navbar h1{
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
@@ -18,11 +29,11 @@
     display: flex;
     gap: 2rem;
     font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1em;
-padding-top: 0.6rem;
-text-decoration: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    padding-top: 0.6rem;
+    text-decoration: none;
 }
 
 .nav-links a:link{
@@ -30,8 +41,12 @@ text-decoration: none;
     text-decoration: none;
 }
 .nav-links a:visited{
- color: black;
+    color: black;
  
+}
+
+.electrolink{
+z-index: 1000;
 }
 
 .tech-title{
@@ -52,10 +67,9 @@ text-decoration: none;
 }
 
 .clothing-container{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -193,6 +207,7 @@ text-align: center;
     height: 5rem;
     justify-content: space-around;
     width: 100%;
+    flex-shrink: 0;
 }
 
 .footer-name{
@@ -218,11 +233,15 @@ text-align: center;
     text-decoration: none;
 }
 
+
+
 .category h1{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 4em;
+    width: fit-content;
+    margin: 0 auto;
     padding: 2rem;
     text-align: center;
 }
@@ -243,11 +262,23 @@ text-align: center;
 }
 
 .category-container{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.category:hover{
+background-color: #FFC55A;
+transition: 50ms;
+}
+
+.categories-container{
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 767px) {
